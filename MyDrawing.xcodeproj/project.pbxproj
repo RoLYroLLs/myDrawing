@@ -1,0 +1,572 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		75748A4F13994E53002033CC /* README in Resources */ = {isa = PBXBuildFile; fileRef = 75748A4E13994E53002033CC /* README */; };
+		75FC9E46139839E100E92113 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FC9E45139839E100E92113 /* UIKit.framework */; };
+		75FC9E48139839E100E92113 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FC9E47139839E100E92113 /* Foundation.framework */; };
+		75FC9E4A139839E100E92113 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FC9E49139839E100E92113 /* CoreGraphics.framework */; };
+		75FC9E4C139839E100E92113 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FC9E4B139839E100E92113 /* QuartzCore.framework */; };
+		75FC9E4E139839E100E92113 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FC9E4D139839E100E92113 /* OpenGLES.framework */; };
+		75FC9E54139839E100E92113 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9E52139839E100E92113 /* InfoPlist.strings */; };
+		75FC9E57139839E100E92113 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FC9E56139839E100E92113 /* main.m */; };
+		75FC9E5A139839E100E92113 /* MyDrawingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FC9E59139839E100E92113 /* MyDrawingAppDelegate.m */; };
+		75FC9E5D139839E200E92113 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9E5B139839E200E92113 /* MainWindow.xib */; };
+		75FC9E71139839E200E92113 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FC9E45139839E100E92113 /* UIKit.framework */; };
+		75FC9E72139839E200E92113 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FC9E47139839E100E92113 /* Foundation.framework */; };
+		75FC9E73139839E200E92113 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FC9E49139839E100E92113 /* CoreGraphics.framework */; };
+		75FC9E7B139839E200E92113 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9E79139839E200E92113 /* InfoPlist.strings */; };
+		75FC9E7E139839E200E92113 /* MyDrawingTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9E7D139839E200E92113 /* MyDrawingTests.h */; };
+		75FC9E80139839E200E92113 /* MyDrawingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FC9E7F139839E200E92113 /* MyDrawingTests.m */; };
+		75FC9E8B13983B1700E92113 /* MyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FC9E8A13983B1700E92113 /* MyWindow.m */; };
+		75FC9E8E13983C2200E92113 /* MyCanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FC9E8D13983C2200E92113 /* MyCanvasView.m */; };
+		75FC9E9A13984BAB00E92113 /* SoundEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FC9E9913984BAB00E92113 /* SoundEffect.m */; };
+		75FC9E9C13987FFD00E92113 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FC9E9B13987FFD00E92113 /* AudioToolbox.framework */; };
+		75FC9EB0139928E500E92113 /* Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9E9F139928E500E92113 /* Blue.png */; };
+		75FC9EB1139928E500E92113 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9EA0139928E500E92113 /* Default.png */; };
+		75FC9EB2139928E500E92113 /* Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9EA1139928E500E92113 /* Green.png */; };
+		75FC9EB3139928E500E92113 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9EA2139928E500E92113 /* Icon-72.png */; };
+		75FC9EB4139928E500E92113 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9EA3139928E500E92113 /* Icon-Small-50.png */; };
+		75FC9EB5139928E500E92113 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9EA4139928E500E92113 /* Icon-Small.png */; };
+		75FC9EB6139928E500E92113 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9EA5139928E500E92113 /* Icon-Small@2x.png */; };
+		75FC9EB7139928E500E92113 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9EA6139928E500E92113 /* Icon.png */; };
+		75FC9EB8139928E500E92113 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9EA7139928E500E92113 /* Icon@2x.png */; };
+		75FC9EB9139928E500E92113 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9EA8139928E500E92113 /* iTunesArtwork */; };
+		75FC9EBA139928E500E92113 /* Particle.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9EA9139928E500E92113 /* Particle.png */; };
+		75FC9EBB139928E500E92113 /* Purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9EAA139928E500E92113 /* Purple.png */; };
+		75FC9EBC139928E600E92113 /* Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9EAB139928E500E92113 /* Red.png */; };
+		75FC9EBD139928E600E92113 /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9EAC139928E500E92113 /* Yellow.png */; };
+		75FC9EBE139928E600E92113 /* Erase.caf in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9EAE139928E500E92113 /* Erase.caf */; };
+		75FC9EBF139928E600E92113 /* Select.caf in Resources */ = {isa = PBXBuildFile; fileRef = 75FC9EAF139928E500E92113 /* Select.caf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		75FC9E74139839E200E92113 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75FC9E38139839E100E92113 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75FC9E40139839E100E92113;
+			remoteInfo = myDrawing;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		75748A4E13994E53002033CC /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		75FC9E41139839E100E92113 /* MyDrawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDrawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75FC9E45139839E100E92113 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		75FC9E47139839E100E92113 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		75FC9E49139839E100E92113 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		75FC9E4B139839E100E92113 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		75FC9E4D139839E100E92113 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		75FC9E51139839E100E92113 /* MyDrawing-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyDrawing-Info.plist"; sourceTree = "<group>"; };
+		75FC9E53139839E100E92113 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		75FC9E55139839E100E92113 /* MyDrawing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyDrawing-Prefix.pch"; sourceTree = "<group>"; };
+		75FC9E56139839E100E92113 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		75FC9E58139839E100E92113 /* MyDrawingAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDrawingAppDelegate.h; sourceTree = "<group>"; };
+		75FC9E59139839E100E92113 /* MyDrawingAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDrawingAppDelegate.m; sourceTree = "<group>"; };
+		75FC9E5C139839E200E92113 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		75FC9E70139839E200E92113 /* MyDrawingTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDrawingTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75FC9E78139839E200E92113 /* MyDrawingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyDrawingTests-Info.plist"; sourceTree = "<group>"; };
+		75FC9E7A139839E200E92113 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		75FC9E7C139839E200E92113 /* MyDrawingTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyDrawingTests-Prefix.pch"; sourceTree = "<group>"; };
+		75FC9E7D139839E200E92113 /* MyDrawingTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDrawingTests.h; sourceTree = "<group>"; };
+		75FC9E7F139839E200E92113 /* MyDrawingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDrawingTests.m; sourceTree = "<group>"; };
+		75FC9E8913983B1600E92113 /* MyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWindow.h; sourceTree = "<group>"; };
+		75FC9E8A13983B1700E92113 /* MyWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWindow.m; sourceTree = "<group>"; };
+		75FC9E8C13983C2200E92113 /* MyCanvasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCanvasView.h; sourceTree = "<group>"; };
+		75FC9E8D13983C2200E92113 /* MyCanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCanvasView.m; sourceTree = "<group>"; };
+		75FC9E9813984BAB00E92113 /* SoundEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundEffect.h; path = MyDrawing/SoundEffect.h; sourceTree = SOURCE_ROOT; };
+		75FC9E9913984BAB00E92113 /* SoundEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundEffect.m; path = MyDrawing/SoundEffect.m; sourceTree = SOURCE_ROOT; };
+		75FC9E9B13987FFD00E92113 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		75FC9E9F139928E500E92113 /* Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue.png; sourceTree = "<group>"; };
+		75FC9EA0139928E500E92113 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		75FC9EA1139928E500E92113 /* Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green.png; sourceTree = "<group>"; };
+		75FC9EA2139928E500E92113 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		75FC9EA3139928E500E92113 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		75FC9EA4139928E500E92113 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		75FC9EA5139928E500E92113 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		75FC9EA6139928E500E92113 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		75FC9EA7139928E500E92113 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		75FC9EA8139928E500E92113 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		75FC9EA9139928E500E92113 /* Particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Particle.png; sourceTree = "<group>"; };
+		75FC9EAA139928E500E92113 /* Purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Purple.png; sourceTree = "<group>"; };
+		75FC9EAB139928E500E92113 /* Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Red.png; sourceTree = "<group>"; };
+		75FC9EAC139928E500E92113 /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
+		75FC9EAE139928E500E92113 /* Erase.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Erase.caf; sourceTree = "<group>"; };
+		75FC9EAF139928E500E92113 /* Select.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Select.caf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		75FC9E3E139839E100E92113 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75FC9E9C13987FFD00E92113 /* AudioToolbox.framework in Frameworks */,
+				75FC9E46139839E100E92113 /* UIKit.framework in Frameworks */,
+				75FC9E48139839E100E92113 /* Foundation.framework in Frameworks */,
+				75FC9E4A139839E100E92113 /* CoreGraphics.framework in Frameworks */,
+				75FC9E4C139839E100E92113 /* QuartzCore.framework in Frameworks */,
+				75FC9E4E139839E100E92113 /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75FC9E6C139839E200E92113 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75FC9E71139839E200E92113 /* UIKit.framework in Frameworks */,
+				75FC9E72139839E200E92113 /* Foundation.framework in Frameworks */,
+				75FC9E73139839E200E92113 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75FC9E36139839E100E92113 = {
+			isa = PBXGroup;
+			children = (
+				75748A4E13994E53002033CC /* README */,
+				75FC9E4F139839E100E92113 /* MyDrawing */,
+				75FC9E76139839E200E92113 /* MyDrawingTests */,
+				75FC9E44139839E100E92113 /* Frameworks */,
+				75FC9E42139839E100E92113 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		75FC9E42139839E100E92113 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75FC9E41139839E100E92113 /* MyDrawing.app */,
+				75FC9E70139839E200E92113 /* MyDrawingTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75FC9E44139839E100E92113 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75FC9E45139839E100E92113 /* UIKit.framework */,
+				75FC9E47139839E100E92113 /* Foundation.framework */,
+				75FC9E49139839E100E92113 /* CoreGraphics.framework */,
+				75FC9E9B13987FFD00E92113 /* AudioToolbox.framework */,
+				75FC9E4B139839E100E92113 /* QuartzCore.framework */,
+				75FC9E4D139839E100E92113 /* OpenGLES.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75FC9E4F139839E100E92113 /* MyDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				75FC9E8913983B1600E92113 /* MyWindow.h */,
+				75FC9E8A13983B1700E92113 /* MyWindow.m */,
+				75FC9E58139839E100E92113 /* MyDrawingAppDelegate.h */,
+				75FC9E59139839E100E92113 /* MyDrawingAppDelegate.m */,
+				75FC9E8C13983C2200E92113 /* MyCanvasView.h */,
+				75FC9E8D13983C2200E92113 /* MyCanvasView.m */,
+				75FC9E5B139839E200E92113 /* MainWindow.xib */,
+				75FC9E9813984BAB00E92113 /* SoundEffect.h */,
+				75FC9E9913984BAB00E92113 /* SoundEffect.m */,
+				75FC9E50139839E100E92113 /* Supporting Files */,
+				75FC9E9D139928E500E92113 /* Resources */,
+			);
+			name = MyDrawing;
+			path = myDrawing;
+			sourceTree = "<group>";
+		};
+		75FC9E50139839E100E92113 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				75FC9E51139839E100E92113 /* MyDrawing-Info.plist */,
+				75FC9E52139839E100E92113 /* InfoPlist.strings */,
+				75FC9E55139839E100E92113 /* MyDrawing-Prefix.pch */,
+				75FC9E56139839E100E92113 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		75FC9E76139839E200E92113 /* MyDrawingTests */ = {
+			isa = PBXGroup;
+			children = (
+				75FC9E7D139839E200E92113 /* MyDrawingTests.h */,
+				75FC9E7F139839E200E92113 /* MyDrawingTests.m */,
+				75FC9E77139839E200E92113 /* Supporting Files */,
+			);
+			name = MyDrawingTests;
+			path = myDrawingTests;
+			sourceTree = "<group>";
+		};
+		75FC9E77139839E200E92113 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				75FC9E78139839E200E92113 /* MyDrawingTests-Info.plist */,
+				75FC9E79139839E200E92113 /* InfoPlist.strings */,
+				75FC9E7C139839E200E92113 /* MyDrawingTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		75FC9E9D139928E500E92113 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				75FC9E9E139928E500E92113 /* Images */,
+				75FC9EAD139928E500E92113 /* Sounds */,
+			);
+			name = Resources;
+			path = MyDrawing/Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		75FC9E9E139928E500E92113 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				75FC9E9F139928E500E92113 /* Blue.png */,
+				75FC9EA0139928E500E92113 /* Default.png */,
+				75FC9EA1139928E500E92113 /* Green.png */,
+				75FC9EA2139928E500E92113 /* Icon-72.png */,
+				75FC9EA3139928E500E92113 /* Icon-Small-50.png */,
+				75FC9EA4139928E500E92113 /* Icon-Small.png */,
+				75FC9EA5139928E500E92113 /* Icon-Small@2x.png */,
+				75FC9EA6139928E500E92113 /* Icon.png */,
+				75FC9EA7139928E500E92113 /* Icon@2x.png */,
+				75FC9EA8139928E500E92113 /* iTunesArtwork */,
+				75FC9EA9139928E500E92113 /* Particle.png */,
+				75FC9EAA139928E500E92113 /* Purple.png */,
+				75FC9EAB139928E500E92113 /* Red.png */,
+				75FC9EAC139928E500E92113 /* Yellow.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		75FC9EAD139928E500E92113 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				75FC9EAE139928E500E92113 /* Erase.caf */,
+				75FC9EAF139928E500E92113 /* Select.caf */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		75FC9E40139839E100E92113 /* MyDrawing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75FC9E83139839E200E92113 /* Build configuration list for PBXNativeTarget "MyDrawing" */;
+			buildPhases = (
+				75FC9E3D139839E100E92113 /* Sources */,
+				75FC9E3E139839E100E92113 /* Frameworks */,
+				75FC9E3F139839E100E92113 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyDrawing;
+			productName = myDrawing;
+			productReference = 75FC9E41139839E100E92113 /* MyDrawing.app */;
+			productType = "com.apple.product-type.application";
+		};
+		75FC9E6F139839E200E92113 /* MyDrawingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75FC9E86139839E200E92113 /* Build configuration list for PBXNativeTarget "MyDrawingTests" */;
+			buildPhases = (
+				75FC9E6B139839E200E92113 /* Sources */,
+				75FC9E6C139839E200E92113 /* Frameworks */,
+				75FC9E6D139839E200E92113 /* Resources */,
+				75FC9E6E139839E200E92113 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75FC9E75139839E200E92113 /* PBXTargetDependency */,
+			);
+			name = MyDrawingTests;
+			productName = myDrawingTests;
+			productReference = 75FC9E70139839E200E92113 /* MyDrawingTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		75FC9E38139839E100E92113 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "RoLYroLLs Enterprises, LLC";
+			};
+			buildConfigurationList = 75FC9E3B139839E100E92113 /* Build configuration list for PBXProject "MyDrawing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 75FC9E36139839E100E92113;
+			productRefGroup = 75FC9E42139839E100E92113 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75FC9E40139839E100E92113 /* MyDrawing */,
+				75FC9E6F139839E200E92113 /* MyDrawingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		75FC9E3F139839E100E92113 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75FC9E54139839E100E92113 /* InfoPlist.strings in Resources */,
+				75FC9E5D139839E200E92113 /* MainWindow.xib in Resources */,
+				75FC9EB0139928E500E92113 /* Blue.png in Resources */,
+				75FC9EB1139928E500E92113 /* Default.png in Resources */,
+				75FC9EB2139928E500E92113 /* Green.png in Resources */,
+				75FC9EB3139928E500E92113 /* Icon-72.png in Resources */,
+				75FC9EB4139928E500E92113 /* Icon-Small-50.png in Resources */,
+				75FC9EB5139928E500E92113 /* Icon-Small.png in Resources */,
+				75FC9EB6139928E500E92113 /* Icon-Small@2x.png in Resources */,
+				75FC9EB7139928E500E92113 /* Icon.png in Resources */,
+				75FC9EB8139928E500E92113 /* Icon@2x.png in Resources */,
+				75FC9EB9139928E500E92113 /* iTunesArtwork in Resources */,
+				75FC9EBA139928E500E92113 /* Particle.png in Resources */,
+				75FC9EBB139928E500E92113 /* Purple.png in Resources */,
+				75FC9EBC139928E600E92113 /* Red.png in Resources */,
+				75FC9EBD139928E600E92113 /* Yellow.png in Resources */,
+				75FC9EBE139928E600E92113 /* Erase.caf in Resources */,
+				75FC9EBF139928E600E92113 /* Select.caf in Resources */,
+				75748A4F13994E53002033CC /* README in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75FC9E6D139839E200E92113 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75FC9E7B139839E200E92113 /* InfoPlist.strings in Resources */,
+				75FC9E7E139839E200E92113 /* MyDrawingTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		75FC9E6E139839E200E92113 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75FC9E3D139839E100E92113 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75FC9E57139839E100E92113 /* main.m in Sources */,
+				75FC9E5A139839E100E92113 /* MyDrawingAppDelegate.m in Sources */,
+				75FC9E8B13983B1700E92113 /* MyWindow.m in Sources */,
+				75FC9E8E13983C2200E92113 /* MyCanvasView.m in Sources */,
+				75FC9E9A13984BAB00E92113 /* SoundEffect.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75FC9E6B139839E200E92113 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75FC9E80139839E200E92113 /* MyDrawingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		75FC9E75139839E200E92113 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75FC9E40139839E100E92113 /* MyDrawing */;
+			targetProxy = 75FC9E74139839E200E92113 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		75FC9E52139839E100E92113 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75FC9E53139839E100E92113 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		75FC9E5B139839E200E92113 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75FC9E5C139839E200E92113 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		75FC9E79139839E200E92113 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75FC9E7A139839E200E92113 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		75FC9E81139839E200E92113 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		75FC9E82139839E200E92113 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		75FC9E84139839E200E92113 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyDrawing/MyDrawing-Prefix.pch";
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = "MyDrawing/MyDrawing-Info.plist";
+				PRODUCT_NAME = MyDrawing;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		75FC9E85139839E200E92113 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyDrawing/MyDrawing-Prefix.pch";
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = "MyDrawing/MyDrawing-Info.plist";
+				PRODUCT_NAME = MyDrawing;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		75FC9E87139839E200E92113 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyDrawing.app/MyDrawing";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyDrawingTests/MyDrawingTests-Prefix.pch";
+				INFOPLIST_FILE = "MyDrawingTests/MyDrawingTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = MyDrawingTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		75FC9E88139839E200E92113 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyDrawing.app/MyDrawing";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyDrawingTests/MyDrawingTests-Prefix.pch";
+				INFOPLIST_FILE = "MyDrawingTests/MyDrawingTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = MyDrawingTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75FC9E3B139839E100E92113 /* Build configuration list for PBXProject "MyDrawing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75FC9E81139839E200E92113 /* Debug */,
+				75FC9E82139839E200E92113 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75FC9E83139839E200E92113 /* Build configuration list for PBXNativeTarget "MyDrawing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75FC9E84139839E200E92113 /* Debug */,
+				75FC9E85139839E200E92113 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75FC9E86139839E200E92113 /* Build configuration list for PBXNativeTarget "MyDrawingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75FC9E87139839E200E92113 /* Debug */,
+				75FC9E88139839E200E92113 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 75FC9E38139839E100E92113 /* Project object */;
+}
