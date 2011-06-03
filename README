@@ -8,7 +8,18 @@ This project is a clone of Apple's GLPaint v1.11 with features added.
 I started out by creating my own blank project in Xcode 4 with unit tests and little by little adding the code and features currently implemented on GLPaint v1.11.
 
 -------------------------------------
+TODO:
+
+Make buttons 'pretty', possible find alternate locations or methods to increase canvas size.
+
+-------------------------------------
 CHANGE LOG:
+
+Version 0.2
+2011-05-03
+Added Save button with ability to save image to user's image library.
+Added Erase button which does the same as shaking the device.
+Decreased the canvas size.
 
 Version 0.1
 2011-06-03

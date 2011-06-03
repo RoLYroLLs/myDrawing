@@ -1,6 +1,6 @@
 //
 //  MyDrawingAppDelegate.m
-//  MyDrawing
+//  MyDrawing 
 //
 //  Created by RoLY roLLs on 6/2/11.
 //  Copyright 2011 RoLYroLLs Enterprises, LLC. All rights reserved.
@@ -16,6 +16,8 @@
 #define kPaletteHeight			30
 #define kPaletteSize			5
 #define kMinEraseInterval		0.5
+
+#define kButtonHeight			30
 
 // Padding for margins
 #define kLeftMargin				10.0
@@ -102,6 +104,8 @@ static void HSL2RGB(float h, float s, float l, float* outR, float* outG, float* 
 @synthesize erasingSound = _erasingSound;
 @synthesize selectSound = _selectSound;
 
+@synthesize saveButton = _saveButton;
+@synthesize eraseButton = _eraseButton;
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -120,7 +124,8 @@ static void HSL2RGB(float h, float s, float l, float* outR, float* outG, float* 
 											 nil]];
 	
 	// Compute a rectangle that is positioned correctly for the segmented control you'll use as a brush color palette
-	CGRect frame = CGRectMake(rect.origin.x + kLeftMargin, rect.size.height - kPaletteHeight - kTopMargin, rect.size.width - (kLeftMargin + kRightMargin), kPaletteHeight);
+	//CGRect frame = CGRectMake(rect.origin.x + kLeftMargin, rect.size.height - kPaletteHeight - kTopMargin, rect.size.width - (kLeftMargin + kRightMargin), kPaletteHeight);
+	CGRect frame = CGRectMake(rect.origin.x, rect.size.height - kPaletteHeight - kButtonHeight, rect.size.width, kPaletteHeight);
 	[segmentedControl setFrame:frame];
 	// When the user chooses a color, the method changeBrushColor: is called.
 	[segmentedControl addTarget:self action:@selector(changeBrushColor:) forControlEvents:UIControlEventValueChanged];
@@ -134,6 +139,28 @@ static void HSL2RGB(float h, float s, float l, float* outR, float* outG, float* 
 	[[self myWindow] addSubview:segmentedControl];
 	// Now that the control is added, you can release it
 	[segmentedControl release];
+	
+	// Erase button
+	[self setEraseButton:[UIButton buttonWithType:UIButtonTypeRoundedRect]];
+	
+	CGRect eraseButtonFrame = CGRectMake(rect.origin.x, rect.size.height - kButtonHeight, rect.size.width / 2, kButtonHeight);
+	[[self eraseButton] setFrame:eraseButtonFrame];
+	
+	[[self myWindow] addSubview:[self eraseButton]];
+	
+	[[self eraseButton] setTitle:@"Erase" forState:UIControlStateNormal];
+	[[self eraseButton] addTarget:self action:@selector(eraseView) forControlEvents:UIControlEventTouchUpInside];
+	
+	// Save button
+	[self setSaveButton:[UIButton buttonWithType:UIButtonTypeRoundedRect]];
+	
+	CGRect saveButtonFrame = CGRectMake(rect.size.width / 2, rect.size.height - kButtonHeight, rect.size.width / 2, kButtonHeight);
+	[[self saveButton] setFrame:saveButtonFrame];
+	
+	[[self myWindow] addSubview:[self saveButton]];
+	
+	[[self saveButton] setTitle:@"Save" forState:UIControlStateNormal];
+	[[self saveButton] addTarget:self action:@selector(saveDrawing) forControlEvents:UIControlEventTouchUpInside];
 	
     // Define a starting color 
 	HSL2RGB((CGFloat) 2.0 / (CGFloat)kPaletteSize, kSaturation, kLuminosity, &components[0], &components[1], &components[2]);
@@ -161,6 +188,7 @@ static void HSL2RGB(float h, float s, float l, float* outR, float* outG, float* 
 {
 	[_selectSound release];
 	[_erasingSound release];
+	[_saveButton release];
 	[_myCanvas release];
 	[_myWindow release];
 	
@@ -183,7 +211,7 @@ static void HSL2RGB(float h, float s, float l, float* outR, float* outG, float* 
 }
 
 // Called when receiving the "shake" notification; plays the erase sound and redraws the view
--(void) eraseView
+-(void)eraseView
 {
 	if(CFAbsoluteTimeGetCurrent() > lastTime + kMinEraseInterval)
 	{
@@ -191,6 +219,50 @@ static void HSL2RGB(float h, float s, float l, float* outR, float* outG, float* 
 		[[self myCanvas] erase];
 		lastTime = CFAbsoluteTimeGetCurrent();
 	}
+}
+
+#pragma mark - Save View as Image
+
+// Called to get a view's context as an image
+-(UIImage *)createImageFromGLView:(UIView *)glView
+{
+    int width = glView.frame.size.width;
+    int height = glView.frame.size.height;
+	
+    NSInteger myDataLength = width * height * 4;
+    // allocate array and read pixels into it.
+    GLubyte *buffer = (GLubyte *) malloc(myDataLength);
+    glReadPixels(0, 0, width, height, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
+    // gl renders "upside down" so swap top to bottom into new array.
+    // there's gotta be a better way, but this works.
+    GLubyte *buffer2 = (GLubyte *) malloc(myDataLength);
+    for(int y = 0; y < height; y++)
+    {
+        for(int x = 0; x < width * 4; x++)
+        {
+            buffer2[((height - 1) - y) * width * 4 + x] = buffer[y * 4 * width + x];
+        }
+    }
+    // make data provider with data.
+    CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, buffer2, myDataLength, NULL);
+    // prep the ingredients
+    int bitsPerComponent = 8;
+    int bitsPerPixel = 32;
+    int bytesPerRow = 4 * width;
+    CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+    CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault;
+    CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
+    // make the cgimage
+    CGImageRef imageRef = CGImageCreate(width, height, bitsPerComponent, bitsPerPixel, bytesPerRow, colorSpaceRef, bitmapInfo, provider, NULL, NO, renderingIntent);
+    // then make the uiimage from that
+    UIImage *myImage = [UIImage imageWithCGImage:imageRef];
+    return myImage;
+}
+
+-(void)saveDrawing
+{
+	// Save the view to the user's library
+	UIImageWriteToSavedPhotosAlbum([self createImageFromGLView:[self myCanvas]], nil, nil, nil);
 }
 
 @end
